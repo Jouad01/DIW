@@ -10,7 +10,7 @@ body {
 /* HEADER */
 
 
-/* el width del header seria 1000px y entre el o y el logo 500px de separacion, pero para cuadrar los tamaños se ha adaptado
+/* el width del header seria 1000px y entre el logo 500px de separacion, pero para cuadrar los tamaños se ha adaptado
 a otra resolución. El resultado sería lo mismo, solo habria que cambiar los tamaños en el resto de elementos */
 
 .texto {
@@ -85,6 +85,7 @@ p {
 .img-fotoFrontal img {
     width: 100%;
     max-height: 300px; /* misma altura estipulada en el ejercicio */
+    object-fit: cover; /* para que no se vea toda la imagen */
     overflow: hidden;
     border-top: 1px dashed black; /* para que las lineas solo esten por arriba y abajo */
     border-bottom: 1px dashed black; 
