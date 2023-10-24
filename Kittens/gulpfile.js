@@ -1,3 +1,4 @@
+// se actualizan añadiendo watch, parallel y src
 const { series, src, dest, watch, parallel } = require('gulp');
 // Tasca 1 SASS
 const scss = require('gulp-sass')(require('sass'));
@@ -49,16 +50,12 @@ function concatJS() {
     .pipe(dest('dist/js/'));
 }
 
-
-// The `clean` function is not exported so it can be considered a private task.
-// It can still be used within the `series()` composition.
 function clean(cb) {
   // body omitted
   cb();
 }
 
-// The `build` function is exported so it is public and can be run with the `gulp` command.
-// It can also be used within the `series()` composition.
+
 function build(cb) {
   // body omitted
   cb();
@@ -67,6 +64,7 @@ function build(cb) {
 exports.build = build;
 exports.default = series(clean, build);
 
+// EXPORTS de TAREAS
 
 exports.compilarSCSS = compilarSCSS;
 exports.watcher = watcher;
@@ -79,7 +77,7 @@ exports.concatJS = concatJS;
 
 // y la tarea kittens servira para ejecutar todas las tareas en serie
 exports.kittens = series(compilarSCSS, parallel(
-    series(minifyCSS, concatCSS), // Luego, minifica y concatena CSS en serie
-    series(minifyJS, concatJS) // Minifica y concatena JavaScript en serie
+    series(minifyCSS, concatCSS),
+    series(minifyJS, concatJS)
   )
 );
