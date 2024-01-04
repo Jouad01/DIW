@@ -15,9 +15,9 @@ aquí se utiliza tanto html como css e inserción de imagenes.
 
 El resultado final:
 
-![Alt text](img/image.png)
+![Alt text](borrador/img/image.png)
 
-![Alt text](img/image-1.png)
+![Alt text](borrador/img/image-1.png)
 
 ## Tarea Gulp-Kittens
 

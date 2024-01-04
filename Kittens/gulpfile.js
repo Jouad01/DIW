@@ -14,7 +14,7 @@ const concat = require('gulp-concat');
 function compilarSCSS(){
   return src('sass/*.scss')
     .pipe(scss()).pipe(dest('css/'));
-}
+  }
 
 // TASCA 2 SASS:WATCH
 function watcher() {

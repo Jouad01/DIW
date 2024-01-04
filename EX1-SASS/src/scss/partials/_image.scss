@@ -1,0 +1,51 @@
+$img-effects: grayscale(100%) sepia(100%) blur(5px) hue-rotate(150deg) invert(0.5) brightness(70%) contrast(2);
+$effect-count: length($img-effects);
+$duracion: 3s;
+
+@for $i from 1 through $effect-count {
+    $effect: nth($img-effects, $i);
+
+    @keyframes efectos#{$i} {
+
+        0%, 100% {
+            @include prefix(filter, none); // 0 indica que no hay efecto y 100 aplica
+        }
+
+        50% {
+            @include prefix(filter, $effect); 
+        }
+    }
+}
+
+img {
+    border-radius: 45%;
+    width: 300px;
+}
+
+img.grayscale {
+    animation: efectos1 #{$duracion} ease infinite;
+}
+
+img.sepia {
+    animation: efectos2 #{$duracion} ease infinite;
+}
+
+img.blur {
+    animation: efectos3 #{$duracion} ease infinite;
+}
+
+img.hue-rotate {
+    animation: efectos4 #{$duracion} ease infinite;
+}
+
+img.invert {
+    animation: efectos5 #{$duracion} ease infinite;
+}
+
+img.brightness {
+    animation: efectos6 #{$duracion} ease infinite;
+}
+
+img.contrast {
+    animation: efectos7 #{$duracion} ease infinite;
+}

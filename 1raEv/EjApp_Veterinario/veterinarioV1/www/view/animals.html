@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Veterinario</title>
+</head>
+<body>
+<!-- <h1>Veterinario Jouad</h1> -->
+<script type="module">
+    import { GetAnimals } from '../service/animalService.js';
+
+    function pintar(animals) {
+        let table = "<table border='1'>";
+            table += "<tr>";
+                table += "<th>Nombre</th>";
+                table += "<th>Ficha</th>";
+            table += "</tr>";
+
+            animals.forEach(function(animal) {
+                table += "<tr>";
+                    table += "<td>" + animal.name + "</td>";
+                    table += "<td> <a href = 'animalForm.html?identificador=" + animal.id + "'> Ficha </td>";
+                table += "</tr>";
+            });
+            table += "</table>";
+                
+        document.querySelector("body").innerHTML = table;
+    }
+
+
+    function init() {
+        const animals = GetAnimals();
+        pintar(animals);
+    }
+
+
+    // window.addEventListener('load', init); 
+    (function() {
+        init();
+    })();
+</script>
+</body>
+</html>

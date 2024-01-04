@@ -1,0 +1,14 @@
+// definir de colores
+$colors: (
+    "success": #2ecc72,
+    "warning": #f1c40f,
+    "error": #e74c3c,
+    "normal": #333333
+);
+
+// WEBKIT I MOZ
+@mixin prefix($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    #{$property}: $value;
+}

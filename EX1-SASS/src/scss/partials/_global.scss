@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Estilos para los dichosos P, SPAN, H1-H6
+p, span, h1, h2, h3, h4, h5, h6 {
+    width: 100%; 
+    margin: 0;   
+    padding: 0;  
+
+    @each $state, $color in $colors {
+        &.#{$state} { 
+            color: $color;
+            background-color: darken($color, 25%); // darken es para oscurecer el color
+        }
+    }
+}
+
+h4, p {
+    background-color: #999; 
+}
+
+// Colores personalizados
+@for $i from 0 through 10 {
+    @for $j from 0 through 10 {
+        @for $k from 0 through 10 {
+            // calcular porcentajes x 10
+            $porcentaje-i: $i * 10;
+            $porcentaje-j: $j * 10;
+            $porcentaje-k: $k * 10;
+
+            // establece el color del texto a un color rgb basado en porcentajes
+            .color-#{$porcentaje-i}-#{$porcentaje-j}-#{$porcentaje-k} {
+                color: rgb($porcentaje-i * 2.55, $porcentaje-j * 2.55, $porcentaje-k * 2.55);
+            }
+
+            .colorbg-#{$porcentaje-i}-#{$porcentaje-j}-#{$porcentaje-k} {
+                background-color: rgb($porcentaje-i * 2.55, $porcentaje-j * 2.55, $porcentaje-k * 2.55);
+            }
+        }
+    }
+}
+
+// Estilos tablas
+table {
+    width: 100%; // tabla ocupe toda la anchura de la pantalla
+    border-collapse: collapse;
+
+    th, td {
+        border: 1px solid black;
+    }
+}
