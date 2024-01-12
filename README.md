@@ -34,3 +34,9 @@ Los pasos principales para el entorno de trabajo son:
    
 5. Y creamos el archivo gulpfile.js donde irán todas nuestras funciones.
    
+
+## KITTENS_MATERIAL
+
+### Resultado
+
+![Alt text](Ej2-Kittens_Material/resultado.png)

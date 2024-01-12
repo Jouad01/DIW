@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/js/application.js',
-        // modernizr_head: './src/js/modernizr-2.5.2.min.js'
     } ,
     mode: 'development',
     plugins: [

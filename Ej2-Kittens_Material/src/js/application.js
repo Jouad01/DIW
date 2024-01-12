@@ -1,8 +1,21 @@
 // importa jquery
 import $ from 'jquery';
 import '../sass/application.scss';
+import {MDCTabBar} from '@material/tab-bar';
+import {MDCTopAppBar} from '@material/top-app-bar';
+import {MDCRipple} from '@material/ripple';
 
-  var names = ['Tiger', 'Samuel', 'Leeloo',
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+  return new MDCRipple(el);
+});
+
+
+var names = ['Tiger', 'Samuel', 'Leeloo',
+
               'Bella', 'Mo', 'Sly',
               'Beezy', 'Maple', 'Rodney',
               'Yonce', 'Reginald', 'Winifred'];
