@@ -1,0 +1,13 @@
+:root {
+    --color: red;
+    --colorCorporativo: orange;
+}
+
+body {
+    background: var(--color);
+}
+
+body div {
+    background: blue;
+    color: var(--colorCorporativo);
+}

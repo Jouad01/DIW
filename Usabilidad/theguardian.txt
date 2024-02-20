@@ -1,0 +1,5 @@
+- La atención del usuario se concentra principalmente en la zona izquierda de la pantalla.
+- La sección inferior derecha, que muestra más noticias, no atrae la atención ni interés del usuario.
+- Los elementos de los últimos videos y noticias carecen de relevancia para el usuario.
+- Se destaca la importancia de las imágenes para captar la atención y el interés del usuario.
+- No todos los enlaces son de interés para el usuario, por lo que una habria que ajustar la selección de contenido vinculado.

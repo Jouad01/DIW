@@ -1,0 +1,9 @@
+- Reducir la cantidad de enlaces
+- El elemento de search es lento y da un error 404
+- Eliminar los gifs
+- Reducir la cantidad de elementos en pantalla
+- Eliminar el scroll horizontal
+- No todos los elementos tienen https
+- No minify js
+- Dom tamaño excesivo
+- no todas imagenes no tienen un width y height especifico
